@@ -23,6 +23,14 @@ class Solution(object):
 
         return unique_index + 1  # 返回不重复区域的长度
 
+        //灵茶山艾府的答案
+        k = 1
+        for i in range(1, len(nums)):
+            if nums[i] != nums[i - 1]:  # nums[i] 不是重复项
+                nums[k] = nums[i]  # 保留 nums[i]
+                k += 1
+        return k
+
         
 # @lc code=end
 
